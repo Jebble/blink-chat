@@ -1,0 +1,11 @@
+$light: #F9F9F9;
+$gray: #EBEAEB;
+$white: #FFFFFF;
+$dark: #000000;
+$primary: #f5fbff;
+$secondary: #FAF2EF;
+
+@import 'scss/functions';
+@import 'scss/layout';
+@import 'scss/sidebar';
+@import 'scss/chat';
