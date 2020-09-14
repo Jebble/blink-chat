@@ -26,7 +26,7 @@ const ConversationItem: React.FC<{id: string}> = ({id}) => {
 			<p>{conversation.messages[conversation.messages.length - 1].text}</p>
 			<span className="time">
 				{lastUpdated.isToday() ?
-					lastUpdated.format('HH:mm:ss')
+					lastUpdated.format('HH:mm')
 				:
 					lastUpdated.format('D MMM YYYY')
 				}
