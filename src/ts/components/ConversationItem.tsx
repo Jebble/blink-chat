@@ -18,8 +18,8 @@ const ConversationItem: React.FC<{id: string}> = ({id}) => {
 	}
 
 	return (
-		<li
-			className={currentConversationId === conversation.id ? 'active' : ''}
+		<button
+			className={`conversation${currentConversationId === conversation.id ? ' active' : ''}`}
 			onClick={handleOnConversationClick}
 		>
 			<h2>{conversation.name}</h2>
@@ -31,7 +31,7 @@ const ConversationItem: React.FC<{id: string}> = ({id}) => {
 					lastUpdated.format('D MMM YYYY')
 				}
 			</span>
-		</li>
+		</button>
 	);
 }
 

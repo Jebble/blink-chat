@@ -46,14 +46,30 @@
 		background: $gray;
 		padding: 20px;
 
-		input {
-			width: 80%;
-			height: 50px;
-		}
+		form {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 
-		button {
-			width: 20%;
-			height: 50px;
+			input {
+				width: 80%;
+				height: 50px;
+				padding: 0 12px;
+				outline: 0;
+				border: none;
+
+				&:focus {
+					border: 1px solid $dark;
+				}
+			}
+
+			button {
+				padding: 14px 30px;
+				background: $dark;
+				appearance: none;
+				border: none;
+				color: $white;
+			}
 		}
 	}
 }

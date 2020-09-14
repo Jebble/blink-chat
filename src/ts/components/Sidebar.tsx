@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useRecoilValue } from 'recoil';
 import ConversationItem from './ConversationItem';
 import { sortedConversationsState } from '../recoil/selectors';
+import SimpleBarReact from 'simplebar-react';
 
 const Sidebar: React.FC = () => {
 
@@ -14,7 +15,7 @@ const Sidebar: React.FC = () => {
 	const ConversationsList: React.FC = () => {
 		const items = conversations.map( conversation => {
 			return (
-				<ConversationItem
+			<ConversationItem
 					key={conversation.id}
 					id={conversation.id}
 				/>
@@ -26,9 +27,9 @@ const Sidebar: React.FC = () => {
 
 	return (
 		<div className="sidebar">
-			<ul>
+			<SimpleBarReact className="conversations-list">
 				<ConversationsList />
-			</ul>
+			</SimpleBarReact>
 		</div>
 	);
 }

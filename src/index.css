@@ -19,3 +19,7 @@ body {
 	height: 100vh;
 	overflow: hidden;
 }
+
+input, button {
+	font-family: 'Nunito Sans', sans-serif;
+}
