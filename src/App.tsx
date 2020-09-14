@@ -1,6 +1,6 @@
 import  './app.scss';
 import React from 'react';
-import { RecoilRoot,MutableSnapshot } from 'recoil';
+import { RecoilRoot, MutableSnapshot } from 'recoil';
 import data from './data.json';
 import { conversationsList, conversationState } from './ts/recoil/atoms';
 import Sidebar from './ts/components/Sidebar';
@@ -22,7 +22,7 @@ const App = () => {
 			}
 		}));
 
-		// Set Recoil Atom for every conversation. Messages are pre-sorted here.
+		// Set Recoil Atom for every conversation.
 		data.forEach(conversation => {
 			set(conversationState(conversation.id), () => {
 				const sortedMessages = [...conversation.messages].sort((a,b) => {
@@ -40,8 +40,8 @@ const App = () => {
 	return (
 		<div className="app">
 			<RecoilRoot initializeState={initializeState}>
-				{/* <Sidebar />
-				<Chat /> */}
+				<Sidebar />
+				{/* <Chat /> */}
 			</RecoilRoot>
 		</div>
 	);
