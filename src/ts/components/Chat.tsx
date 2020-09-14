@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useRecoilValue } from 'recoil';
-import { v4 as uuidv4 } from 'uuid';
 import { currentConversationState } from '../recoil/atoms';
 import Conversation from './Conversation';
 
