@@ -2,7 +2,7 @@ import  './app.scss';
 import React from 'react';
 import { RecoilRoot, MutableSnapshot } from 'recoil';
 import data from './data.json';
-import { conversationsList, conversationState } from './ts/recoil/atoms';
+import { conversationsList, conversationState, currentConversationState } from './ts/recoil/atoms';
 import Sidebar from './ts/components/Sidebar';
 import Chat from './ts/components/Chat';
 

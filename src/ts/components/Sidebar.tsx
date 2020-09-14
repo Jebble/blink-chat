@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRecoilValue } from 'recoil';
+import { useRecoilValue, useRecoilState } from 'recoil';
 import ConversationItem from './ConversationItem';
 import { conversationsList } from '../recoil/atoms';
 
@@ -23,7 +23,7 @@ const Sidebar: React.FC = () => {
 			);
 		});
 
-		return <React.Fragment>{items}</React.Fragment>;
+		return <>{items}</>;
 	}
 
 	return (
