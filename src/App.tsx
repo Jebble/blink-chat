@@ -41,7 +41,7 @@ const App = () => {
 		<div className="app">
 			<RecoilRoot initializeState={initializeState}>
 				<Sidebar />
-				{/* <Chat /> */}
+				<Chat />
 			</RecoilRoot>
 		</div>
 	);

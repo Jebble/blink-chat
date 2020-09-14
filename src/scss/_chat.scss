@@ -1,24 +1,30 @@
 .chat {
 	display: flex;
 	flex-direction: column;
-	background: $secondary;
+	background: $light;
 
 	.messages {
 		flex: 1;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
+		padding: 10px;
 
 		.message {
 			margin: 10px;
-			padding: 20px;
+			padding: 14px 20px 20px;
 			background: $white;
-			flex: 0;
-			max-width: 75%;
 
-			&.me {
-				align-self: flex-end;
-				background: $primary;
+			.time {
+				font-weight: bold;
+				margin-bottom: 8px;
+				font-size: rem-calc(12);
+				// text-align: right;
+				color: $dark;
+			}
+
+			p {
+				font-size: rem-calc(15);
 			}
 		}
 	}
