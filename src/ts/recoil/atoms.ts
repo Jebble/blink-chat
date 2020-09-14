@@ -1,5 +1,4 @@
-import memoizeOne from 'memoize-one';
-import { atom } from 'recoil';
+import { atom, atomFamily } from 'recoil';
 import { ConversationProps } from '../types';
 
 export const conversationsList = atom<{id: string, last_updated: string}[]>({
@@ -7,7 +6,7 @@ export const conversationsList = atom<{id: string, last_updated: string}[]>({
 	default: []
 });
 
-export const conversationWithId = memoizeOne((id: string) => atom({
-	key: `Conversation/${id}`,
+export const conversationState = atomFamily({
+	key: 'conversation',
 	default: {} as ConversationProps
-}));
+});
