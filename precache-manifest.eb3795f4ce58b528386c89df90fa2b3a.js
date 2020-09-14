@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b6f2f2123427a63260aaecb9e3852198",
+    "revision": "31bf2a4c9e62b7bb94d394a85f4079cc",
     "url": "/blink-chat/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blink-chat/static/css/2.60c19592.chunk.css"
   },
   {
-    "revision": "d56233c23fd7835239c1",
+    "revision": "eea754284fcf1f9632cc",
     "url": "/blink-chat/static/css/main.1e3b464c.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blink-chat/static/js/2.ce4842e2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d56233c23fd7835239c1",
-    "url": "/blink-chat/static/js/main.09768129.chunk.js"
+    "revision": "eea754284fcf1f9632cc",
+    "url": "/blink-chat/static/js/main.c9bda9b5.chunk.js"
   },
   {
     "revision": "e45f1e745a07efcb2336",
