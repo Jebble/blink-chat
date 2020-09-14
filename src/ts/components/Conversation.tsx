@@ -1,11 +1,14 @@
 import React, { useEffect, useRef } from 'react'
 import dayjs from 'dayjs';
+import isToday from 'dayjs/plugin/isToday';
 import { useRecoilValue } from 'recoil';
 import SimpleBarReact from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 import { currentConversationState, conversationState } from '../recoil/atoms';
 import { ConversationProps } from '../types';
 import MessageInput from './MessageInput';
+
+dayjs.extend(isToday);
 
 const Conversation: React.FC = () => {
 
@@ -20,6 +23,16 @@ const Conversation: React.FC = () => {
 		}
 	}, [conversation]);
 
+	const getTimestamp: (timestamp: string) => string = (timestamp) => {
+		const lastUpdated = dayjs(timestamp);
+		if (lastUpdated.isToday()) {
+			return lastUpdated.format('HH:mm:ss');
+		}
+
+		return lastUpdated.format('dddd DD-MM-YYYY HH:mm:ss');
+
+	}
+
 	return (<>
 		<SimpleBarReact
 			className="messages"
@@ -31,7 +44,7 @@ const Conversation: React.FC = () => {
 				return (
 					<div key={message.id} className="message">
 						<div className="time">
-							{dayjs(message.last_updated).format('dddd DD MMM YYYY HH:mm:ss')}
+							{getTimestamp(message.last_updated)}
 						</div>
 						<p>{message.text}</p>
 					</div>
