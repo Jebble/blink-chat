@@ -9,16 +9,14 @@ import MessageInput from './MessageInput';
 
 const Conversation: React.FC = () => {
 
-	const currentConversationId = useRecoilValue<string>(currentConversationState);
+	const currentConversationId = useRecoilValue<string | null>(currentConversationState);
 	const conversation = useRecoilValue<ConversationProps>(conversationState(currentConversationId));
 	const scrollableNodeRef = useRef<HTMLDivElement>();
 
 	// Scroll chat to bottom on load and new messages
 	useEffect(() => {
 		if (scrollableNodeRef.current) {
-			//setTimeout(() => {
 			scrollableNodeRef.current.scrollTop = scrollableNodeRef.current.scrollHeight;
-			//}, 1);
 		}
 	}, [conversation]);
 

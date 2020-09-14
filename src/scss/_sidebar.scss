@@ -21,11 +21,7 @@
 			&:hover,
 			&:focus {
 				background: rgba($gray, 0.5);
-			}
-
-			&:focus {
-				outline: 0;
-				border-right: 5px solid $dark;
+				border-bottom-color: $dark;
 			}
 
 			&.active {

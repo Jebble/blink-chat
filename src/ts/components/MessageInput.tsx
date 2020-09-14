@@ -6,7 +6,7 @@ import { ConversationProps } from '../types';
 
 const MessageInput: React.FC = () => {
 
-	const currentConversationId = useRecoilValue<string>(currentConversationState);
+	const currentConversationId = useRecoilValue<string | null>(currentConversationState);
 	const conversation = useRecoilValue<ConversationProps>(conversationState(currentConversationId));
 	const [message, setMessage] = useState<string>('');
 
