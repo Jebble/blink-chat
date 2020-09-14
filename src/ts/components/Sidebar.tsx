@@ -1,20 +1,18 @@
-import React from 'react';
-import { useRecoilValue, useRecoilState } from 'recoil';
+import React, { useEffect } from 'react';
+import { useRecoilValue } from 'recoil';
 import ConversationItem from './ConversationItem';
-import { conversationsList } from '../recoil/atoms';
+import { sortedConversationsState } from '../recoil/selectors';
 
 const Sidebar: React.FC = () => {
 
-	const conversations = useRecoilValue(conversationsList);
+	const conversations = useRecoilValue(sortedConversationsState);
 
 	/**
 	 * Sort conversations by last_updated
 	 * @return ConversationItem[]
 	 */
 	const ConversationsList: React.FC = () => {
-		const items = [...conversations].sort((a, b) => {
-			return new Date(b.last_updated).getTime() - new Date(a.last_updated).getTime();
-		}).map( conversation => {
+		const items = conversations.map( conversation => {
 			return (
 				<ConversationItem
 					key={conversation.id}

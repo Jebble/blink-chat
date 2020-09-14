@@ -2,7 +2,7 @@ import  './app.scss';
 import React from 'react';
 import { RecoilRoot, MutableSnapshot } from 'recoil';
 import data from './data.json';
-import { conversationsList, conversationState, currentConversationState } from './ts/recoil/atoms';
+import { conversationIdsState, conversationState } from './ts/recoil/atoms';
 import Sidebar from './ts/components/Sidebar';
 import Chat from './ts/components/Chat';
 
@@ -15,12 +15,7 @@ const App = () => {
 	const initializeState = ({set}: MutableSnapshot) => {
 
 		// Set the conversationList Atom
-		set(conversationsList, () => data.map(conversation => {
-			return {
-				id: conversation.id,
-				last_updated: conversation.last_updated
-			}
-		}));
+		set(conversationIdsState, () => data.map(conversation => conversation.id));
 
 		// Set Recoil Atom for every conversation.
 		data.forEach(conversation => {
