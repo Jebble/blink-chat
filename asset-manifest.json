@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/blink-chat/static/css/main.1e3b464c.chunk.css",
+    "main.js": "/blink-chat/static/js/main.09768129.chunk.js",
+    "main.js.map": "/blink-chat/static/js/main.09768129.chunk.js.map",
+    "runtime-main.js": "/blink-chat/static/js/runtime-main.b6ff27af.js",
+    "runtime-main.js.map": "/blink-chat/static/js/runtime-main.b6ff27af.js.map",
+    "static/css/2.60c19592.chunk.css": "/blink-chat/static/css/2.60c19592.chunk.css",
+    "static/js/2.ce4842e2.chunk.js": "/blink-chat/static/js/2.ce4842e2.chunk.js",
+    "static/js/2.ce4842e2.chunk.js.map": "/blink-chat/static/js/2.ce4842e2.chunk.js.map",
+    "index.html": "/blink-chat/index.html",
+    "precache-manifest.f70b6bdcacd9a0c12245cf24a7ff3b01.js": "/blink-chat/precache-manifest.f70b6bdcacd9a0c12245cf24a7ff3b01.js",
+    "service-worker.js": "/blink-chat/service-worker.js",
+    "static/css/2.60c19592.chunk.css.map": "/blink-chat/static/css/2.60c19592.chunk.css.map",
+    "static/css/main.1e3b464c.chunk.css.map": "/blink-chat/static/css/main.1e3b464c.chunk.css.map",
+    "static/js/2.ce4842e2.chunk.js.LICENSE.txt": "/blink-chat/static/js/2.ce4842e2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b6ff27af.js",
+    "static/css/2.60c19592.chunk.css",
+    "static/js/2.ce4842e2.chunk.js",
+    "static/css/main.1e3b464c.chunk.css",
+    "static/js/main.09768129.chunk.js"
+  ]
+}
